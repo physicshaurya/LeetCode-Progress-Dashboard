@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetCode Progress Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="./utils.js" type="module"></script>
+</head>
+<body>
+  <h1>LeetCode Progress Dashboard</h1>
+  <h2>Total Count : <span id="count"></span></h2>
+
+  <!-- Streak Counter Section -->
+  <div id="streakCounter">
+    <h3>Current Streak: <span id="streakDays">0</span> Days</h3>
+  </div>
+
+  <!-- Filter Section -->
+  <div id="filters">
+    <label for="statusFilter">Filter by Status: </label>
+    <select id="statusFilter">
+      <option value="all">All</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      <option value="Reading Article">Reading Article</option>
+      <option value="Only Attempted">Only Attempted</option>
+      <option value="Can Try">Can Try</option>
+      <option value="Only Read">Only Read</option>
+    </select>
+  </div>
+
+  <!-- Container for the chart -->
+  <div id="chartContainer">
+    <canvas id="revisionChart"></canvas>
+  </div>
+
+  <div id="dashboard">
+    <table id="progressTable">
+      <thead>
+        <tr>
+          <th>Problem</th>
+          <th>Revision Required</th>
+          <th>Date</th>
+          <th>Attempt 2</th>
+          <th>Attempt 3</th>
+          <th>Comments</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be inserted here by JavaScript -->
+      </tbody>
+    </table>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
